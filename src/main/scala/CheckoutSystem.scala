@@ -1,6 +1,6 @@
 object CheckoutSystem {
   def compute(articles: Seq[String]): BigDecimal = {
-    0.0
+    articles.length * BigDecimal("0.6")
   }
 
 }
