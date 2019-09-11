@@ -4,6 +4,7 @@ sealed trait Fruit {
 }
 
 object Fruit {
+
   case object Apple extends Fruit {
     val name = "Apple"
     val price = BigDecimal("0.6")
