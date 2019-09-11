@@ -11,6 +11,10 @@ class CheckoutSystemTest extends org.specs2.mutable.Specification {
     "return correct value for list of Apples and Oranges" in {
       CheckoutSystem.compute(Seq("Apple", "Orange", "Apple", "Orange")) must_== BigDecimal("1.7")
     }
+
+    "return correct value for list when taking discounts" in {
+      CheckoutSystem.computeWithDiscounts(Seq("Apple", "Apple", "Orange", "Orange", "Orange")) must_== BigDecimal("1.1")
+    }
   }
 
 }
